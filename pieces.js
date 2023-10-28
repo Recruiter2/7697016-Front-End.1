@@ -29,7 +29,7 @@ function genererPieces(pieces){
         descriptionElement.innerText = article.description ?? "Pas de description pour le moment.";
         const stockElement = document.createElement("p");
         stockElement.innerText = article.disponibilite ? "En stock" : "Rupture de stock";
-        //Code ajouté
+        //Code ajouté 
         const avisBouton = document.createElement("button");
         avisBouton.dataset.id = article.id;
         avisBouton.textContent = "Afficher les avis";
@@ -73,7 +73,7 @@ boutonFiltrer.addEventListener("click", function () {
     genererPieces(piecesFiltrees);
 });
 
-//Correction Exercice
+//Correction Exercice boutonDecroissant
 const boutonDecroissant = document.querySelector(".btn-decroissant");
 
 boutonDecroissant.addEventListener("click", function () {
@@ -119,7 +119,7 @@ document.querySelector('.abordables')
     .appendChild(pElement)
     .appendChild(abordablesElements);
 
-//Code Exercice 
+//Code Exercice lister Pièces disponibles: nom + prix 
 const nomsDisponibles = pieces.map(piece => piece.nom)
 const prixDisponibles = pieces.map(piece => piece.prix)
 
